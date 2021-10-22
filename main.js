@@ -1,4 +1,4 @@
-const linksSocialMedia = {
+const LinksSocialMedia = {
   github: 'kaioadson',
   youtube: 'kaioadson',
   facebook: 'kaioadson',
@@ -10,14 +10,14 @@ function changeSocialMediaLinks() {
   for (let li of socialLinks.children) {
     const social = li.getAttribute('class')
 
-    li.children[0].href = `https://${social}.com/${linksSocialMedia[social]}`
+    li.children[0].href = `https://${social}.com/${LinksSocialMedia[social]}`
   }
 }
 
 changeSocialMediaLinks()
 
 function getGithubProfileInfos() {
-  const url = `https://api.github.com/users/${linksSocialMedia.github}`
+  const url = `https://api.github.com/users/${LinksSocialMedia.github}`
 
   fetch(url)
     .then(response => response.json())
